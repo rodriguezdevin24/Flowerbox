@@ -36,3 +36,174 @@
     transform: rotate(360deg);
   }
 }
+.grid-container {  display: grid;
+  grid-template-columns: 1.8fr;
+  grid-template-rows: auto;
+  grid-auto-columns: 1fr;
+  gap: 7px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "nav"
+    "big-image"
+    "products"
+    "footer";
+}
+
+.nav {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "about collections delivery-service location contact-us";
+  grid-area: nav;
+}
+
+.about { grid-area: about; }
+
+.collections { grid-area: collections; }
+
+.delivery-service { grid-area: delivery-service; }
+
+.location { grid-area: location; }
+
+.contact-us { grid-area: contact-us; }
+
+.big-image { grid-area: big-image; }
+
+.products {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px 20px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    ". . .";
+  grid-area: products;
+}
+
+footer {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo customer-service flowerbox";
+  grid-area: footer;
+}
+
+.logo { grid-area: logo; }
+
+.customer-service { grid-area: customer-service; }
+
+.flowerbox { grid-area: flowerbox; }  
+/*----------------------*/
+html {
+  background-color: whitesmoke;
+}
+.nav {
+  height: 72px;
+  margin: 25px;
+  background-color: #92b2ba;
+}
+nav div {
+  justify-self: center;    
+  align-self: center;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.big-image {
+  margin: 0 auto;
+  height: 540px;
+  width: 1320px;
+}
+.products {
+  margin-top: 32px;
+  margin-left: 64px;
+  margin-right: 64px; 
+}
+.product {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), -2px -2px 4px rgba(255, 255, 255, 0.2);
+}
+.products div {
+  background-color: white;
+}
+.products div img {
+  width: 100%;
+  height: 75%;
+}
+.products div .name {
+  color: #9e14a3;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+  position: relative;
+  left: 12px;
+}
+
+.price {
+  width: 32px;
+  height: 24px;
+  color: white;
+  background-color: #f0a8bb;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+  position: relative;
+  left: 378px;
+  text-align: center;
+}
+
+.tags {
+  display: flex;
+  justify-content: space-around;
+}
+.tags div {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #eeeeee;
+}
+
+.product-info {
+  background-color: white;
+}
+
+footer {
+  height: 300px;
+  margin-top: 32px;
+  margin-left: 64px;
+  margin-right: 64px;
+  margin-bottom: 32px;
+  background-color: #eeeeee;
+}
+
+.logo {
+  justify-self: end;
+}
+.logo img {
+  width: 128px;
+  height: 128px;
+}
+
+.customer-service{
+  justify-self: center;
+}
+.text {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.flowerbox{
+  justify-self: center;
+}
+
+.pink-text {
+  color: #f0a8bb;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+}
+
+.blue-text {
+  color: #92b2ba;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+}
